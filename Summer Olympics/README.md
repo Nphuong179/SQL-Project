@@ -11,8 +11,12 @@ The dataset used for this project is the "summer.csv" file, containing detailed 
 ### Findings
 
 Rank each country’s athletes by number of medals they have won
+
 Identify athletes who have won more medals than they did at the previous Olympics
+
 Identify the sport and nationality that women have won more medals than men each year
+
 Identify which sport each country’s athletes continue to win gold medal at Olympics
+
 Identify which country can maintain the longest momentum in winning gold medals for each sport
 
