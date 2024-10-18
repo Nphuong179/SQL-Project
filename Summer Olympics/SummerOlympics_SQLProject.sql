@@ -1,8 +1,5 @@
 -- The longest streak of gold medals for each country in each sport 
-Drop view LongestStreak
-
 Create view LongestStreak As
-Go
 With GoldMedals As (
 	Select
 		Distinct Year,
@@ -60,11 +57,9 @@ From StreakLength
 Group by Sport
 ) As LongestLength
 on s.Sport = LongestLength.Sport
-and s.StreakLength = LongestLength.LongestLengthValue
-Go
-select * from practice.dbo.olympics
+and s.StreakLength = LongestLength.LongestLengthValue;
+
 -- Identify number of years every country had at least 3 attending sports that has gained gold medals
-Drop view NumberOfYear_AtLeastThreeSpots_WinGold
 Create View NumberOfYear_AtLeastThreeSpots_WinGold As
 With GoldMedals As (
 	Select 
@@ -88,5 +83,3 @@ With GoldMedals As (
 		Count(*) As NumberOfYears
 	From NumberOfSportsGoldMedal
 	Group by Country;
-
-	
